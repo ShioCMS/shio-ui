@@ -2,29 +2,41 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Site } from './core/site/site.service';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
-
+import { SiteListComponent } from './site-list/site-list.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AvatarModule } from 'ngx-avatar';
+import { HttpClientModule } from '@angular/common/http';
+import { MomentModule } from 'angular2-moment';
 @NgModule({
   imports: [
-   
+
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: SiteListComponent },
     ]),
     FormsModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule,
+    AvatarModule,
+    HttpClientModule,
+    MomentModule
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent
+    SiteListComponent,
+    SideBarComponent
   ],
-  bootstrap: [ AppComponent ]
+  providers: [
+    Site
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 

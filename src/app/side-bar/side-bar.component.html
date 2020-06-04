@@ -1,0 +1,106 @@
+<nav class="sidebar-menu">
+    <ul>
+        <li>
+            <a href="/content#!/home">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faHome" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    Dashboard
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/content#!/post/type">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faCubes" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    Modeling
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/content#!/playground">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faPlay" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    API Playground
+                </span>
+            </a>
+        </li>
+        <!--<li class="has-subnav">
+            <a href="/stock" target="_blank">
+                <i class="fa fa-sidebar fa-pagelines fa-2x fa-2x-sidebar"></i>
+                <span class="nav-text">
+                    Stock
+                </span>
+            </a>
+        </li>-->
+
+    </ul>
+
+    <ul class="sidebar-bottom">
+        <li>
+            <a href="/content#!/admin">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faCogs" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    Administration Console
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="/content#!/config">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faSlidersH" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    Configuration Console
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="https://shio.readme.io/docs" target="_blank" rel="noopener noreferrer">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faBook" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    Documentation
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="https://shiocms.slack.com" target="_blank" rel="noopener noreferrer">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faSlack" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    Community
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href="https://github.com/ShioCMS" target="_blank" rel="noopener noreferrer">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faGithub" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    GitHub
+                </span>
+            </a>
+        </li>
+        <li>
+            <a href ng-click="logout()">
+                <div class="fa-sidebar fa-2x-sidebar">
+                    <fa-icon [icon]="faPowerOff" size="fa-sm"></fa-icon>
+                </div>
+                <span class="nav-text">
+                    Logout
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>

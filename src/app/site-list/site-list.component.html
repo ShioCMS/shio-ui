@@ -1,0 +1,64 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink>Sites</a>
+    <ng-template ngbNavContent>
+
+      <div class="float-right">
+        <button type="button" class="btn btn-viglet mr-1">
+          <fa-icon [icon]="faFileImport" size="xs"></fa-icon> Import
+        </button><button type="button" class="btn btn-success">
+          <fa-icon [icon]="faSitemap" size="xs"></fa-icon> New
+        </button>
+      </div>
+      <h3>Select your Site</h3>
+      <div style="padding-top: 10px;">
+        <div class="form-group">
+          <input type="email" class="form-control" id="searchSite" aria-describedby="emailHelp"
+            placeholder="Find a site..." aria-label="Search a Site">
+        </div>
+        <ul class="list-group">
+          <li *ngFor="let site of getSites()" class="list-group-item">
+            <div style="display: flex;">
+            <div>
+              <fa-icon [icon]="faSitemap" size="4x"
+                [styles]="{'margin-right': '10px','color': 'tomato','margin-top': '16px'}"></fa-icon>
+            </div>
+            <div>
+              <a type="button" class="btn btn-link">{{site.name}}</a>
+              <div style="font-size: 12px;margin-left: 14px;">
+                <div style="display: table-row">
+                  <div>
+                    <span style="color: gray">{{site.date | amTimeAgo}}</span>
+                    <span> - </span>
+                    {{site.description}}
+                  </div>
+                </div>
+                <div>
+                  <div style="display: inline;">
+                    <h6><span class="badge badge-shio">Site</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </li>
+        </ul>
+      </div>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink>Task</a>
+    <ng-template ngbNavContent>
+      <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+        farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+        ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+        helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+        8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+        stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+<pre>Active: {{ active }}</pre>

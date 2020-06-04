@@ -1,25 +1,27 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-    <a class="navbar-brand" href="#">Shio CMS</a>
+<nav class="navbar navbar-expand-md fixed-top bg-light">
+    <div style="display: flex;padding-right: 40px;">
+        <div style="background: tomato;width: 40px;height: 40px;color: antiquewhite;padding-top: 6px;padding-left: 4px;font-size: 18px;font-weight:  bolder; border-width: 1px; border-style: solid;border-radius: 5px;box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);margin-right: 20px;
+        margin-top: 3px;">
+            <div style="margin-top: 5px;">
+                Sh
+            </div>
+        </div>
+        <div class="hidden-xs"
+            style="margin-top: 17px; color: #444; font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif; font-size: 20px; line-height: 1; letter-spacing: .02em; font-weight: 400;">
+            Shio CMS</div>
+    </div>
     <button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
         data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown" ngbDropdown>
-                <a class="nav-link dropdown-toggle" id="id01" href="#" ngbDropdownToggle>Files</a>
-                <div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
-                    <a class="dropdown-item" href="#">HTML</a>
-                    <a class="dropdown-item" href="#">TS</a>
-                    <a class="dropdown-item" href="#">JS</a>
-                </div>
-            </li>
-        </ul>
+        <form class="form-inline my-9 my-lg-0">
+            <input class="form-control mr-sm-9" type="search" placeholder="Search for..." aria-label="Search">
+            <button class="btn btn-outline-success my-9 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+    <div>
+        <ngx-avatar name="Alexandre Oliveira" size="40" [round]="true"></ngx-avatar>
     </div>
 </nav>
-<!-- 
-  Copyright Google LLC. All Rights Reserved.
-  Use of this source code is governed by an MIT-style license that
-  can be found in the LICENSE file at http://angular.io/license
-  -->
